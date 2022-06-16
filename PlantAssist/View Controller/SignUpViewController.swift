@@ -9,24 +9,23 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseCore
-import Firebase
+//import Firebase
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet weak var FirstNametxt: UITextField!
     
-    @IBOutlet weak var Passwordtxt: UITextField!
-    
-    @IBOutlet weak var Errorlb: UILabel!
+    @IBOutlet weak var LastNametxt: UITextField!
+        
+    @IBOutlet weak var Phonenumtxt: UITextField!
     
     @IBOutlet weak var Signupbtn: UIButton!
     
-    @IBOutlet weak var Phonenumtxt: UITextField!
+    @IBOutlet weak var Errorlb: UILabel!
     
     @IBOutlet weak var Emailtxt: UITextField!
     
-    @IBOutlet weak var LastNametxt: UITextField!
-    
-    @IBOutlet weak var FirstNametxt: UITextField!
+    @IBOutlet weak var Passwordtxt: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +94,7 @@ class SignUpViewController: UIViewController {
                     //users was created successfully store first and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("Users").addDocument(data: ["firstName":firstName,"lastName":lastName,"email":email,"passWord":passWord, "phoneNumber":phoneNumber,"uid": result?.user.uid]) {(error) in
+                    db.collection("users").addDocument(data: ["firstName":firstName,"lastName":lastName,"email":email,"passWord":passWord, "phoneNumber":phoneNumber,"uid": result?.user.uid]) {(error) in
                     if error != nil {
                         //show error meassage
                         showError("User failed. Try again.")
