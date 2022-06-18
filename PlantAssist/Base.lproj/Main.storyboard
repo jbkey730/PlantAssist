@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fDj-g5-3fc">
-                                <rect key="frame" x="40" y="580.5" width="334" height="241.5"/>
+                                <rect key="frame" x="40" y="649" width="334" height="173"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N9-bB-deA">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="31"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal">
+                                        <state key="normal" title="Seed Classifier">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <buttonConfiguration key="configuration" style="filled" title="Seed Classifier">
+                                        <buttonConfiguration key="configuration" style="plain" title="Seed Classifier">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -35,16 +35,21 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-84-BqR">
                                         <rect key="frame" x="0.0" y="71" width="334" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Predictions" titleAlignment="center">
+                                        <buttonConfiguration key="configuration" style="plain" title="Predictions" titleAlignment="center">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="Poi-Pg-LKM" kind="presentation" id="oJk-uw-c9r"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlantLeafimage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-i4-Gbq">
-                                        <rect key="frame" x="0.0" y="142" width="334" height="99.5"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-YX-U6a">
+                                        <rect key="frame" x="0.0" y="142" width="334" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                        <connections>
+                                            <segue destination="dGB-Ka-RYU" kind="presentation" id="FBU-gS-Jja"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Plant Assist!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ds6-ZW-9yO">
@@ -53,6 +58,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlantLeafimage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-i4-Gbq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gq5-5W-ycb"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -62,8 +70,12 @@
                             <constraint firstItem="Gq5-5W-ycb" firstAttribute="trailing" secondItem="fDj-g5-3fc" secondAttribute="trailing" constant="40" id="COl-v3-bWK"/>
                             <constraint firstItem="ds6-ZW-9yO" firstAttribute="leading" secondItem="Gq5-5W-ycb" secondAttribute="leading" constant="40" id="JXh-IN-Gl2"/>
                             <constraint firstItem="ds6-ZW-9yO" firstAttribute="leading" secondItem="Gq5-5W-ycb" secondAttribute="leading" constant="40" id="RwZ-Gj-PaW"/>
+                            <constraint firstItem="GBa-i4-Gbq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="S3o-tb-2kw"/>
                             <constraint firstItem="Gq5-5W-ycb" firstAttribute="trailing" secondItem="ds6-ZW-9yO" secondAttribute="trailing" constant="40" id="TBv-vi-5aX"/>
+                            <constraint firstItem="GBa-i4-Gbq" firstAttribute="leading" secondItem="Gq5-5W-ycb" secondAttribute="leading" id="X5U-Jp-2L8"/>
                             <constraint firstItem="Gq5-5W-ycb" firstAttribute="bottom" secondItem="fDj-g5-3fc" secondAttribute="bottom" constant="40" id="d23-LD-kp4"/>
+                            <constraint firstItem="GBa-i4-Gbq" firstAttribute="trailing" secondItem="Gq5-5W-ycb" secondAttribute="trailing" id="nW1-ez-QbU"/>
+                            <constraint firstAttribute="bottom" secondItem="GBa-i4-Gbq" secondAttribute="bottom" id="qGf-ME-Lxd"/>
                             <constraint firstItem="fDj-g5-3fc" firstAttribute="leading" secondItem="Gq5-5W-ycb" secondAttribute="leading" constant="40" id="xP5-wk-bTK"/>
                             <constraint firstItem="ds6-ZW-9yO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="znW-RA-444"/>
                         </constraints>
@@ -90,8 +102,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx1-ne-j5e">
                                 <rect key="frame" x="80" y="782" width="254" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Menu" titleAlignment="center">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Menu">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -105,7 +120,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKf-Cs-kYs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKf-Cs-kYs">
                                 <rect key="frame" x="0.0" y="147" width="414" height="627"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                             </imageView>
@@ -167,8 +182,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TT-Rb-KyV">
                                 <rect key="frame" x="80" y="791" width="254" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Menu" titleAlignment="center">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Menu">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -235,11 +253,11 @@
             <objects>
                 <viewController id="dGB-Ka-RYU" customClass="HomeViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sDr-fP-eGZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a8Q-Fu-ON1">
-                                <rect key="frame" x="40" y="713.5" width="334" height="108.5"/>
+                                <rect key="frame" x="40" y="693.5" width="334" height="108.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsl-s7-a4m">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -306,7 +324,7 @@
             <objects>
                 <viewController id="3D9-jS-TNA" customClass="LoginViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pdx-b0-x2u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="woo-zd-VNk">
@@ -371,7 +389,7 @@
             <objects>
                 <viewController id="5fy-XV-Yf0" customClass="SignUpViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P15-EQ-sbq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ueC-JC-QHF">
@@ -456,7 +474,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FYq-an-bQd"/>
+        <segue reference="HRM-Va-6cz"/>
+        <segue reference="FBU-gS-Jja"/>
+        <segue reference="jHi-an-Mbx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="PlantLeafimage" width="82" height="99.5"/>

@@ -12,6 +12,8 @@
 		103CFDC4285AD0C4000E2720 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC1285AD0C4000E2720 /* FirebaseAuth.framework */; };
 		103CFDC6285AD0C4000E2720 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC2285AD0C4000E2720 /* FirebaseCore.framework */; };
 		103CFDC8285AD0C4000E2720 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC3285AD0C4000E2720 /* FirebaseFirestore.framework */; };
+		104D51FB285C1BA100EFCB96 /* BiometricIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D51FA285C1B9F00EFCB96 /* BiometricIDAuth.swift */; };
+		104D51FD285CCF9600EFCB96 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D51FC285CCF9400EFCB96 /* KeyChain.swift */; };
 		1061418528388ECD004350A8 /* tomato animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1061418428388ECC004350A8 /* tomato animation.gif */; };
 		107F00072835B1560044CA67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F00062835B14E0044CA67 /* Constants.swift */; };
 		1096FC1F2859099700268CB8 /* Pods_PlantAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2465CE4B6906E6BD73595AA7 /* Pods_PlantAssist.framework */; };
@@ -56,6 +58,9 @@
 		103CFDC1285AD0C4000E2720 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103CFDC2285AD0C4000E2720 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103CFDC3285AD0C4000E2720 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		104D51FA285C1B9F00EFCB96 /* BiometricIDAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricIDAuth.swift; sourceTree = "<group>"; };
+		104D51FC285CCF9400EFCB96 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		104D51FE285CEA6800EFCB96 /* PlantAssist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantAssist.entitlements; sourceTree = "<group>"; };
 		1061418428388ECC004350A8 /* tomato animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tomato animation.gif"; sourceTree = "<group>"; };
 		10633EAA2833190900C85A3B /* club.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = club.mlmodel; sourceTree = "<group>"; };
 		107F00052833E4BF0044CA67 /* club.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = club.mlmodel; path = ../../../../Downloads/club.mlmodel; sourceTree = "<group>"; };
@@ -180,6 +185,7 @@
 		109C1E2127EFF23E004826CF /* PlantAssist */ = {
 			isa = PBXGroup;
 			children = (
+				104D51FE285CEA6800EFCB96 /* PlantAssist.entitlements */,
 				1061418328388495004350A8 /* Media */,
 				10CE21102832FD6E0082390F /* Functions */,
 				10DC6BD82832EAC500B45369 /* View Controller */,
@@ -218,6 +224,8 @@
 			children = (
 				10CE210E2832FD630082390F /* Utilities.swift */,
 				107F00062835B14E0044CA67 /* Constants.swift */,
+				104D51FA285C1B9F00EFCB96 /* BiometricIDAuth.swift */,
+				104D51FC285CCF9400EFCB96 /* KeyChain.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -501,6 +509,8 @@
 				10DC6BD22832E9D300B45369 /* SignUpViewController.swift in Sources */,
 				109C1E2727EFF23E004826CF /* ViewController.swift in Sources */,
 				109C1E5427EFF38C004826CF /* Inceptionv3.mlmodel in Sources */,
+				104D51FB285C1BA100EFCB96 /* BiometricIDAuth.swift in Sources */,
+				104D51FD285CCF9600EFCB96 /* KeyChain.swift in Sources */,
 				107F00072835B1560044CA67 /* Constants.swift in Sources */,
 				109C1E2327EFF23E004826CF /* AppDelegate.swift in Sources */,
 				10CE210F2832FD640082390F /* Utilities.swift in Sources */,
@@ -688,12 +698,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconpiechart;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = PlantAssist/PlantAssist.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L34NVW767B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantAssist/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PLANAT;
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Photo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -726,12 +738,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconpiechart;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = PlantAssist/PlantAssist.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L34NVW767B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantAssist/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PLANAT;
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Photo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 //import Firebase
 import FirebaseCore
+//import LocalAuthentication
+import KeychainSwift
 
 class LoginViewController: UIViewController {
 
@@ -22,7 +24,21 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //signing in user
+//       if let receivedData = KeyChain.load(key: "PlantAssistEmail") {
+//           let result = receivedData.to(type: String.self)
+//           print("result: ", result)
+           //Usernametxt.text = result
 
+//       }
+        let keychain = KeychainSwift()
+
+        let keyPassWord = keychain.get("PlantAssistPassword")
+        let keyEmail = keychain.get("PlantAssistEmail")
+
+        Passwordtxt.text = keyPassWord
+        Usernametxt.text = keyEmail
         // Do any additional setup after loading the view.
         setUpElements()
     }
@@ -36,31 +52,73 @@ class LoginViewController: UIViewController {
 
     @IBAction func LoginTapped(_ sender: Any) {
         // validate text fields
-        
         //creat cleaned version of text field
         let email = Usernametxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         let passWord = Passwordtxt.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        //signing in user
+//        let stringPassword: String = passWord
+//        let passwordData = Data(from: stringPassword)
+//        let statusPassword = KeyChain.save(key: "PlantAssistPassword", data: passwordData)
+//        print("status: ", statusPassword)
+//
+//        let stringEmail: String = email
+//        let emailData = Data(from: stringEmail)
+//        let statusEmail = KeyChain.save(key: "PlantAssistEmail", data: emailData)
+//        print("status: ", statusEmail)
+    
+        let keychain = KeychainSwift()
+        keychain.set(passWord, forKey: "PlantAssistPassword")
+        keychain.set(email, forKey: "PlantAssistEmail")
+
+        //biometric authintication
+        let biometricIDAuth = BiometricIDAuth()
+
+        biometricIDAuth.canEvaluate { (canEvaluate, _, canEvaluateError) in
+            guard canEvaluate else {
+                // Face ID/Touch ID may not be available or configured
+                return
+            }
+            
+            biometricIDAuth.evaluate { [weak self] (success, error) in
+                guard success else {
+                    // Face ID/Touch ID may not be configured
+                    return
+                }
+                
         Auth.auth().signIn(withEmail: email, password: passWord) {
             (result, error) in
             
             if error != nil {
-                self.Errorlb.text = error!.localizedDescription
-                self.Errorlb.alpha = 1
+                self?.Errorlb.text = error!.localizedDescription
+                self?.Errorlb.alpha = 1
             }
             else{
-                let ViewController =  self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.ViewController) as? ViewController
+                let ViewController =  self?.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.ViewController) as? ViewController
                     
-                self.view.window?.rootViewController = ViewController
+                self?.view.window?.rootViewController = ViewController
                     
-                self.view.window?.makeKeyAndVisible()
+                self?.view.window?.makeKeyAndVisible()
                 }
             }
+        //save info in keychain
+                //guard let userName = self?.Usernametxt.text,
+                //      let password = self?.Passwordtxt.text else { return }
+                    
+                //let keychain = KeychainSwift()
+                //keychain.accessGroup = "com.PlantAssist"
+                //keychain.set(userName, forKey: "userName")
+                //keychain.set(password, forKey: "password")
+                    
+                // The next flow is navigation. Basically, it pushes to ReadBlogsViewController
+
+                
+                // You are successfully verified
+            }
         }
-        
-    }
+
+        }//ibaction end
+    }//class end
     
     /*
     // MARK: - Navigation
