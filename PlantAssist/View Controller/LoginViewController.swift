@@ -50,6 +50,22 @@ class LoginViewController: UIViewController {
         Utilities.styleFilledButton(Loginbtn)
     }
 
+    @IBAction func frgtPassTapped(_ sender: Any) {
+        Auth.auth().sendPasswordReset(withEmail: Usernametxt.text!) { error in
+                   DispatchQueue.main.async {
+                       if self.Usernametxt.text?.isEmpty==true || error != nil {
+                           let resetFailedAlert = UIAlertController(title: "Reset Failed", message: "Error: \(String(describing: error?.localizedDescription))", preferredStyle: .alert)
+                           resetFailedAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                           self.present(resetFailedAlert, animated: true, completion: nil)
+                       }
+                       if error == nil && self.Usernametxt.text?.isEmpty==false{
+                           let resetEmailAlertSent = UIAlertController(title: "Reset Email Sent", message: "Reset email has been sent to your login email, please follow the instructions in the mail to reset your password", preferredStyle: .alert)
+                           resetEmailAlertSent.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                           self.present(resetEmailAlertSent, animated: true, completion: nil)
+                       }
+                   }
+               }
+    }
     @IBAction func LoginTapped(_ sender: Any) {
         // validate text fields
         //creat cleaned version of text field

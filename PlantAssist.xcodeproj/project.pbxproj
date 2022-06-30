@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1020B90D27F032D4003C536D /* club.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1020B90C27F032D4003C536D /* club.mlmodel */; };
+		101B2759286D19920020E4FE /* club.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 10633EAA2833190900C85A3B /* club.mlmodel */; };
+		101B275B286D25300020E4FE /* ModelTypeClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B275A286D252F0020E4FE /* ModelTypeClassification.swift */; };
 		10226954283C10F5004D867A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10226953283C10F4004D867A /* HomeViewController.swift */; };
 		103CFDC4285AD0C4000E2720 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC1285AD0C4000E2720 /* FirebaseAuth.framework */; };
 		103CFDC6285AD0C4000E2720 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC2285AD0C4000E2720 /* FirebaseCore.framework */; };
 		103CFDC8285AD0C4000E2720 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC3285AD0C4000E2720 /* FirebaseFirestore.framework */; };
 		104D51FB285C1BA100EFCB96 /* BiometricIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D51FA285C1B9F00EFCB96 /* BiometricIDAuth.swift */; };
-		104D51FD285CCF9600EFCB96 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104D51FC285CCF9400EFCB96 /* KeyChain.swift */; };
 		1061418528388ECD004350A8 /* tomato animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1061418428388ECC004350A8 /* tomato animation.gif */; };
 		107F00072835B1560044CA67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107F00062835B14E0044CA67 /* Constants.swift */; };
 		1096FC1F2859099700268CB8 /* Pods_PlantAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2465CE4B6906E6BD73595AA7 /* Pods_PlantAssist.framework */; };
@@ -53,17 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1020B90C27F032D4003C536D /* club.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = club.mlmodel; path = ../../../Downloads/club.mlmodel; sourceTree = "<group>"; };
+		101B275A286D252F0020E4FE /* ModelTypeClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTypeClassification.swift; sourceTree = "<group>"; };
 		10226953283C10F4004D867A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		103CFDC1285AD0C4000E2720 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103CFDC2285AD0C4000E2720 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103CFDC3285AD0C4000E2720 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		104D51FA285C1B9F00EFCB96 /* BiometricIDAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricIDAuth.swift; sourceTree = "<group>"; };
-		104D51FC285CCF9400EFCB96 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		104D51FE285CEA6800EFCB96 /* PlantAssist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlantAssist.entitlements; sourceTree = "<group>"; };
 		1061418428388ECC004350A8 /* tomato animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tomato animation.gif"; sourceTree = "<group>"; };
 		10633EAA2833190900C85A3B /* club.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = club.mlmodel; sourceTree = "<group>"; };
-		107F00052833E4BF0044CA67 /* club.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = club.mlmodel; path = ../../../../Downloads/club.mlmodel; sourceTree = "<group>"; };
 		107F00062835B14E0044CA67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1096FC08285908AF00268CB8 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1096FC0C285908BF00268CB8 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				10633EAA2833190900C85A3B /* club.mlmodel */,
-				107F00052833E4BF0044CA67 /* club.mlmodel */,
 				109C1E5227EFF38B004826CF /* Inceptionv3.mlmodel */,
 			);
 			path = Models;
@@ -193,7 +190,6 @@
 				109C1E2427EFF23E004826CF /* SceneDelegate.swift */,
 				109C1E2827EFF23E004826CF /* Main.storyboard */,
 				109C1E2B27EFF24D004826CF /* Assets.xcassets */,
-				1020B90C27F032D4003C536D /* club.mlmodel */,
 				10633EA9283318E500C85A3B /* Models */,
 				109C1E2D27EFF24D004826CF /* LaunchScreen.storyboard */,
 				109C1E3027EFF24D004826CF /* Info.plist */,
@@ -223,9 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				10CE210E2832FD630082390F /* Utilities.swift */,
+				101B275A286D252F0020E4FE /* ModelTypeClassification.swift */,
 				107F00062835B14E0044CA67 /* Constants.swift */,
 				104D51FA285C1B9F00EFCB96 /* BiometricIDAuth.swift */,
-				104D51FC285CCF9400EFCB96 /* KeyChain.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -510,12 +506,12 @@
 				109C1E2727EFF23E004826CF /* ViewController.swift in Sources */,
 				109C1E5427EFF38C004826CF /* Inceptionv3.mlmodel in Sources */,
 				104D51FB285C1BA100EFCB96 /* BiometricIDAuth.swift in Sources */,
-				104D51FD285CCF9600EFCB96 /* KeyChain.swift in Sources */,
 				107F00072835B1560044CA67 /* Constants.swift in Sources */,
+				101B275B286D25300020E4FE /* ModelTypeClassification.swift in Sources */,
 				109C1E2327EFF23E004826CF /* AppDelegate.swift in Sources */,
 				10CE210F2832FD640082390F /* Utilities.swift in Sources */,
 				109C1E2527EFF23E004826CF /* SceneDelegate.swift in Sources */,
-				1020B90D27F032D4003C536D /* club.mlmodel in Sources */,
+				101B2759286D19920020E4FE /* club.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,7 +701,7 @@
 				DEVELOPMENT_TEAM = L34NVW767B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantAssist/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PLANAT;
+				INFOPLIST_KEY_CFBundleDisplayName = BroadVisions;
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Photo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -745,7 +741,7 @@
 				DEVELOPMENT_TEAM = L34NVW767B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantAssist/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PLANAT;
+				INFOPLIST_KEY_CFBundleDisplayName = BroadVisions;
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Photo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

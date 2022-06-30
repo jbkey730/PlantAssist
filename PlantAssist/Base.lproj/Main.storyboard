@@ -11,11 +11,14 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeBC" id="BYZ-38-t0r" customClass="ViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeBC" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlantLeafimage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-i4-Gbq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fDj-g5-3fc">
                                 <rect key="frame" x="40" y="649" width="334" height="173"/>
                                 <subviews>
@@ -25,7 +28,7 @@
                                         <state key="normal" title="Seed Classifier">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <buttonConfiguration key="configuration" style="plain" title="Seed Classifier">
+                                        <buttonConfiguration key="configuration" style="plain" title="Image Classifier">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -58,9 +61,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlantLeafimage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-i4-Gbq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gq5-5W-ycb"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -89,59 +89,72 @@
         <!--View Controller-->
         <scene sceneID="9pX-nf-9aw">
             <objects>
-                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="ZDx-wW-EYQ" customClass="ViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ZDx-wW-EYQ" customClass="ViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v4C-Js-SkW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed Imaging" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5M-Wc-62t">
-                                <rect key="frame" x="40" y="88" width="334" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx1-ne-j5e">
-                                <rect key="frame" x="80" y="782" width="254" height="31"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="plain" title="Menu">
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="jHi-an-Mbx"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7P-SN-2mD">
-                                <rect key="frame" x="203" y="603.5" width="8" height="43.5"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="i7P-SN-2mD">
+                                <rect key="frame" x="111" y="272" width="192" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKf-Cs-kYs">
-                                <rect key="frame" x="0.0" y="147" width="414" height="627"/>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKf-Cs-kYs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="694"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yg2-xt-5uG">
+                                <rect key="frame" x="0.0" y="772" width="394" height="90"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-Qv-x3K">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="90"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ZDx-wW-EYQ" id="Dcj-SU-sEk"/>
+                                            <outlet property="delegate" destination="ZDx-wW-EYQ" id="VFY-Bj-dUn"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5M-Wc-62t">
+                                        <rect key="frame" x="202" y="0.0" width="192" height="90"/>
+                                        <attributedString key="attributedText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Sxu-vS-PAI"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ATI-uH-LM7"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="P5M-Wc-62t" firstAttribute="top" secondItem="ATI-uH-LM7" secondAttribute="top" id="4IS-g1-qgf"/>
-                            <constraint firstItem="Sx1-ne-j5e" firstAttribute="top" secondItem="BKf-Cs-kYs" secondAttribute="bottom" constant="8" symbolic="YES" id="5yt-Up-pb2"/>
-                            <constraint firstItem="P5M-Wc-62t" firstAttribute="leading" secondItem="ATI-uH-LM7" secondAttribute="leading" constant="40" id="FUp-Ep-MRk"/>
-                            <constraint firstItem="BKf-Cs-kYs" firstAttribute="top" secondItem="P5M-Wc-62t" secondAttribute="bottom" constant="17" id="PX2-31-RAO"/>
-                            <constraint firstItem="BKf-Cs-kYs" firstAttribute="trailing" secondItem="ATI-uH-LM7" secondAttribute="trailing" id="g2D-s4-hEt"/>
-                            <constraint firstItem="Sx1-ne-j5e" firstAttribute="bottom" secondItem="ATI-uH-LM7" secondAttribute="bottom" id="gex-z5-Uey"/>
-                            <constraint firstItem="ATI-uH-LM7" firstAttribute="trailing" secondItem="Sx1-ne-j5e" secondAttribute="trailing" constant="80" id="hGK-8w-1Sr"/>
-                            <constraint firstItem="ATI-uH-LM7" firstAttribute="trailing" secondItem="P5M-Wc-62t" secondAttribute="trailing" constant="40" id="ny2-OH-jL3"/>
-                            <constraint firstItem="BKf-Cs-kYs" firstAttribute="leading" secondItem="ATI-uH-LM7" secondAttribute="leading" id="reU-r6-e0J"/>
-                            <constraint firstItem="Sx1-ne-j5e" firstAttribute="leading" secondItem="ATI-uH-LM7" secondAttribute="leading" constant="80" id="uxg-1b-skO"/>
+                            <constraint firstItem="BKf-Cs-kYs" firstAttribute="trailing" secondItem="ATI-uH-LM7" secondAttribute="trailing" id="6gb-gY-9ZB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yg2-xt-5uG" secondAttribute="trailing" id="6s1-H9-Pac"/>
+                            <constraint firstItem="ATI-uH-LM7" firstAttribute="bottom" secondItem="BKf-Cs-kYs" secondAttribute="bottom" constant="80" id="KEx-JE-Zbw"/>
+                            <constraint firstItem="Yg2-xt-5uG" firstAttribute="leading" secondItem="ATI-uH-LM7" secondAttribute="leading" id="MVV-0g-LfP"/>
+                            <constraint firstItem="BKf-Cs-kYs" firstAttribute="leading" secondItem="ATI-uH-LM7" secondAttribute="leading" id="cSE-Pa-oU8"/>
+                            <constraint firstItem="BKf-Cs-kYs" firstAttribute="top" secondItem="ATI-uH-LM7" secondAttribute="top" id="gI6-x3-jRS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Yg2-xt-5uG" secondAttribute="bottom" id="x2S-rA-VY6"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="AqH-lx-cuO">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Sx1-ne-j5e">
+                            <rect key="frame" x="173.5" y="5" width="67" height="34.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Menu">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <buttonConfiguration key="configuration" style="plain" image="menubar.rectangle" catalog="system">
+                                <color key="baseForegroundColor" systemColor="linkColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="jHi-an-Mbx"/>
+                            </connections>
+                        </button>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="cBf-yJ-oeG">
                                 <connections>
@@ -155,10 +168,12 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="BKf-Cs-kYs" id="6Kr-eE-t2G"/>
+                        <outlet property="modelPicker" destination="I7c-Qv-x3K" id="ORf-Dr-zZm"/>
+                        <outlet property="seedImagelb" destination="P5M-Wc-62t" id="puS-bU-3Xq"/>
                         <outlet property="textView" destination="i7P-SN-2mD" id="N9t-xj-jEi"/>
                     </connections>
                 </viewController>
@@ -169,13 +184,13 @@
         <!--View Controller-->
         <scene sceneID="OGs-Zh-qBE">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="7dL-gN-V06" customClass="ViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="7dL-gN-V06" customClass="ViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZv-TE-sVV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predictions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1L-Xf-u5U">
-                                <rect key="frame" x="40" y="128" width="334" height="42"/>
+                                <rect key="frame" x="40" y="84" width="334" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -215,13 +230,16 @@
         <!--Navigation Controller-->
         <scene sceneID="Vhs-yd-gZF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ywl-Il-e7Q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" providesPresentationContextTransitionStyle="YES" modalTransitionStyle="flipHorizontal" modalPresentationStyle="overFullScreen" id="ywl-Il-e7Q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5lj-9G-9sk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RmZ-cb-Bc6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ZDx-wW-EYQ" kind="relationship" relationship="rootViewController" id="Tqv-Iq-SxT"/>
                     </connections>
@@ -233,13 +251,16 @@
         <!--Navigation Controller-->
         <scene sceneID="nw3-Oj-sCF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Poi-Pg-LKM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="Poi-Pg-LKM" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qml-Cx-Mnh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qON-Eo-sG6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="7dL-gN-V06" kind="relationship" relationship="rootViewController" id="sfJ-q2-dKE"/>
                     </connections>
@@ -251,13 +272,13 @@
         <!--Home View Controller-->
         <scene sceneID="dCs-Tc-02w">
             <objects>
-                <viewController id="dGB-Ka-RYU" customClass="HomeViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="dGB-Ka-RYU" customClass="HomeViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sDr-fP-eGZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a8Q-Fu-ON1">
-                                <rect key="frame" x="40" y="693.5" width="334" height="108.5"/>
+                                <rect key="frame" x="40" y="713.5" width="334" height="108.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsl-s7-a4m">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -322,13 +343,13 @@
         <!--Login View Controller-->
         <scene sceneID="dBA-3o-Cg9">
             <objects>
-                <viewController id="3D9-jS-TNA" customClass="LoginViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3D9-jS-TNA" customClass="LoginViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pdx-b0-x2u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="woo-zd-VNk">
-                                <rect key="frame" x="40" y="84" width="334" height="230.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="281.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username/Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjb-B6-dkD">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -338,10 +359,20 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZQ-Yc-faj">
                                         <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
+                                    <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGV-Rl-2yi">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Forgot Password?" titleAlignment="center">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="frgtPassTapped:" destination="3D9-jS-TNA" eventType="touchUpInside" id="ExT-xv-bn8"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-3W-iuv">
-                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="191" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="GFf-Pa-p00"/>
                                         </constraints>
@@ -352,7 +383,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-fa-Qjo">
-                                        <rect key="frame" x="0.0" y="210" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="261" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -387,9 +418,9 @@
         <!--Sign Up View Controller-->
         <scene sceneID="oVN-Xd-kzT">
             <objects>
-                <viewController id="5fy-XV-Yf0" customClass="SignUpViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="5fy-XV-Yf0" customClass="SignUpViewController" customModule="PlantAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P15-EQ-sbq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ueC-JC-QHF">
@@ -421,7 +452,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Juf-zQ-8EC">
                                         <rect key="frame" x="0.0" y="280" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQr-En-Gqi">
                                         <rect key="frame" x="0.0" y="350" width="334" height="50"/>
@@ -474,12 +505,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HRM-Va-6cz"/>
         <segue reference="FBU-gS-Jja"/>
         <segue reference="jHi-an-Mbx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="PlantLeafimage" width="82" height="99.5"/>
+        <image name="menubar.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
