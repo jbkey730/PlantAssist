@@ -9,6 +9,7 @@ import UIKit
 import CoreML
 import Vision
 import Social
+import SwiftUI
 
 extension UIImage {
     func resize(_ width: CGFloat, _ height:CGFloat) -> UIImage? {
@@ -36,6 +37,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textView: UITextField!
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var FormView: UIButton!
     
     //model picker
     let models = ["Club","Inception","Sorghum","PlantID"]
@@ -74,8 +77,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
            
            imagePicker.delegate = self
            
+           
        }
-
+    
+    @IBAction func formTapped(_ sender: Any) {
+        let vc = UIHostingController(rootView: DataBaseViewController())
+        present(vc, animated: true)
+        
+    }
+    
+    //@objc func tappedFormButton() {}
            
    func detect(image: CIImage) {
        //var imageCropAndScaleOption: VNImageCropAndScaleOption = .scaleFill

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fDj-g5-3fc">
-                                <rect key="frame" x="40" y="649" width="334" height="173"/>
+                                <rect key="frame" x="40" y="578" width="334" height="244"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N9-bB-deA">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="31"/>
@@ -35,8 +35,16 @@
                                             <segue destination="ywl-Il-e7Q" kind="presentation" id="HRM-Va-6cz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-84-BqR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9F-1k-qMy">
                                         <rect key="frame" x="0.0" y="71" width="334" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="formTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WuE-XI-DX6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKE-84-BqR">
+                                        <rect key="frame" x="0.0" y="142" width="334" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Predictions" titleAlignment="center">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,7 +54,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-YX-U6a">
-                                        <rect key="frame" x="0.0" y="142" width="334" height="31"/>
+                                        <rect key="frame" x="0.0" y="213" width="334" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                                         <connections>
@@ -81,6 +89,9 @@
                         </constraints>
                     </view>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="FormView" destination="Z9F-1k-qMy" id="LwM-Me-3xK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +152,8 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="AqH-lx-cuO">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Sx1-ne-j5e">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="save" id="SVM-JI-cMS"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Sx1-ne-j5e">
                             <rect key="frame" x="173.5" y="5" width="67" height="34.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -189,12 +201,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predictions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1L-Xf-u5U">
-                                <rect key="frame" x="40" y="84" width="334" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TT-Rb-KyV">
                                 <rect key="frame" x="80" y="791" width="254" height="31"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -212,12 +218,9 @@
                         <viewLayoutGuide key="safeArea" id="wcb-pH-Yqh"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
-                            <constraint firstItem="D1L-Xf-u5U" firstAttribute="leading" secondItem="wcb-pH-Yqh" secondAttribute="leading" constant="40" id="Kib-AV-2TT"/>
                             <constraint firstItem="2TT-Rb-KyV" firstAttribute="leading" secondItem="wcb-pH-Yqh" secondAttribute="leading" constant="80" id="d8Q-VY-Lj6"/>
                             <constraint firstItem="wcb-pH-Yqh" firstAttribute="bottom" secondItem="2TT-Rb-KyV" secondAttribute="bottom" constant="40" id="fnJ-rr-dWh"/>
                             <constraint firstItem="wcb-pH-Yqh" firstAttribute="trailing" secondItem="2TT-Rb-KyV" secondAttribute="trailing" constant="80" id="iQZ-8N-hXH"/>
-                            <constraint firstItem="D1L-Xf-u5U" firstAttribute="top" secondItem="wcb-pH-Yqh" secondAttribute="top" constant="40" id="uI5-xZ-S9j"/>
-                            <constraint firstItem="wcb-pH-Yqh" firstAttribute="trailing" secondItem="D1L-Xf-u5U" secondAttribute="trailing" constant="40" id="vA2-CL-BPu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fte-mx-m96"/>

@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import SwiftUI
 //import Firebase
 
 //@main
@@ -15,10 +16,15 @@ import FirebaseCore
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //var viewDataBase: ViewDataBase?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        //let viewDataBase = ViewDataBase()
+
+        //HomeView().environmentObject(viewDataBase)
         FirebaseApp.configure()
         
         return true
@@ -40,4 +46,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 

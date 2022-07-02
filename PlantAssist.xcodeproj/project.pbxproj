@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		101B2759286D19920020E4FE /* club.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 10633EAA2833190900C85A3B /* club.mlmodel */; };
 		101B275B286D25300020E4FE /* ModelTypeClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B275A286D252F0020E4FE /* ModelTypeClassification.swift */; };
+		101B275D286E4B850020E4FE /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B275C286E4B800020E4FE /* Database.swift */; };
+		101B275F286E639F0020E4FE /* ViewDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B275E286E639E0020E4FE /* ViewDataBase.swift */; };
+		101B2763286E8B490020E4FE /* DataBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B2762286E8B480020E4FE /* DataBaseViewController.swift */; };
 		10226954283C10F5004D867A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10226953283C10F4004D867A /* HomeViewController.swift */; };
 		103CFDC4285AD0C4000E2720 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC1285AD0C4000E2720 /* FirebaseAuth.framework */; };
 		103CFDC6285AD0C4000E2720 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 103CFDC2285AD0C4000E2720 /* FirebaseCore.framework */; };
@@ -27,6 +30,8 @@
 		109C1E4427EFF24F004826CF /* PlantAssistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C1E4327EFF24F004826CF /* PlantAssistUITests.swift */; };
 		109C1E4627EFF24F004826CF /* PlantAssistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109C1E4527EFF24F004826CF /* PlantAssistUITestsLaunchTests.swift */; };
 		109C1E5427EFF38C004826CF /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 109C1E5227EFF38B004826CF /* Inceptionv3.mlmodel */; };
+		10AA31E3286FB25D008871D0 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA31E2286FB25C008871D0 /* NewPostViewController.swift */; };
+		10AA31E6286FBC1C008871D0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AA31E5286FBC1C008871D0 /* DetailViewController.swift */; };
 		10CE210F2832FD640082390F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE210E2832FD630082390F /* Utilities.swift */; };
 		10CFFCE22833117100501764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10CFFCE12833117100501764 /* GoogleService-Info.plist */; };
 		10DC6BD22832E9D300B45369 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DC6BD12832E9D200B45369 /* SignUpViewController.swift */; };
@@ -54,6 +59,9 @@
 
 /* Begin PBXFileReference section */
 		101B275A286D252F0020E4FE /* ModelTypeClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTypeClassification.swift; sourceTree = "<group>"; };
+		101B275C286E4B800020E4FE /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		101B275E286E639E0020E4FE /* ViewDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataBase.swift; sourceTree = "<group>"; };
+		101B2762286E8B480020E4FE /* DataBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseViewController.swift; sourceTree = "<group>"; };
 		10226953283C10F4004D867A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		103CFDC1285AD0C4000E2720 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		103CFDC2285AD0C4000E2720 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +89,8 @@
 		109C1E4327EFF24F004826CF /* PlantAssistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAssistUITests.swift; sourceTree = "<group>"; };
 		109C1E4527EFF24F004826CF /* PlantAssistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAssistUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		109C1E5227EFF38B004826CF /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		10AA31E2286FB25C008871D0 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		10AA31E5286FBC1C008871D0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		10CE210E2832FD630082390F /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		10CFFCE12833117100501764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10DC6BD12832E9D200B45369 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -183,14 +193,15 @@
 			isa = PBXGroup;
 			children = (
 				104D51FE285CEA6800EFCB96 /* PlantAssist.entitlements */,
+				10633EA9283318E500C85A3B /* Models */,
 				1061418328388495004350A8 /* Media */,
 				10CE21102832FD6E0082390F /* Functions */,
+				10AA31E4286FB272008871D0 /* SQL Database */,
 				10DC6BD82832EAC500B45369 /* View Controller */,
 				109C1E2227EFF23E004826CF /* AppDelegate.swift */,
 				109C1E2427EFF23E004826CF /* SceneDelegate.swift */,
 				109C1E2827EFF23E004826CF /* Main.storyboard */,
 				109C1E2B27EFF24D004826CF /* Assets.xcassets */,
-				10633EA9283318E500C85A3B /* Models */,
 				109C1E2D27EFF24D004826CF /* LaunchScreen.storyboard */,
 				109C1E3027EFF24D004826CF /* Info.plist */,
 				10CFFCE12833117100501764 /* GoogleService-Info.plist */,
@@ -213,6 +224,18 @@
 				109C1E4527EFF24F004826CF /* PlantAssistUITestsLaunchTests.swift */,
 			);
 			path = PlantAssistUITests;
+			sourceTree = "<group>";
+		};
+		10AA31E4286FB272008871D0 /* SQL Database */ = {
+			isa = PBXGroup;
+			children = (
+				101B275C286E4B800020E4FE /* Database.swift */,
+				101B275E286E639E0020E4FE /* ViewDataBase.swift */,
+				101B2762286E8B480020E4FE /* DataBaseViewController.swift */,
+				10AA31E5286FBC1C008871D0 /* DetailViewController.swift */,
+				10AA31E2286FB25C008871D0 /* NewPostViewController.swift */,
+			);
+			path = "SQL Database";
 			sourceTree = "<group>";
 		};
 		10CE21102832FD6E0082390F /* Functions */ = {
@@ -501,16 +524,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				10DC6BD42832EA3A00B45369 /* LoginViewController.swift in Sources */,
+				10AA31E6286FBC1C008871D0 /* DetailViewController.swift in Sources */,
 				10226954283C10F5004D867A /* HomeViewController.swift in Sources */,
+				101B2763286E8B490020E4FE /* DataBaseViewController.swift in Sources */,
 				10DC6BD22832E9D300B45369 /* SignUpViewController.swift in Sources */,
 				109C1E2727EFF23E004826CF /* ViewController.swift in Sources */,
+				10AA31E3286FB25D008871D0 /* NewPostViewController.swift in Sources */,
 				109C1E5427EFF38C004826CF /* Inceptionv3.mlmodel in Sources */,
+				101B275F286E639F0020E4FE /* ViewDataBase.swift in Sources */,
 				104D51FB285C1BA100EFCB96 /* BiometricIDAuth.swift in Sources */,
 				107F00072835B1560044CA67 /* Constants.swift in Sources */,
 				101B275B286D25300020E4FE /* ModelTypeClassification.swift in Sources */,
 				109C1E2327EFF23E004826CF /* AppDelegate.swift in Sources */,
 				10CE210F2832FD640082390F /* Utilities.swift in Sources */,
 				109C1E2527EFF23E004826CF /* SceneDelegate.swift in Sources */,
+				101B275D286E4B850020E4FE /* Database.swift in Sources */,
 				101B2759286D19920020E4FE /* club.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
