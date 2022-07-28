@@ -8,14 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct dataBase: Decodable {
-    let error: Bool
-    let message: String
-    let data:[postDataBase]
-}
+//struct dataBase: Decodable {
+//    let error: Bool
+//    let message: String
+//    let data:[postDataBase]
+// }
 
-struct postDataBase: Decodable {
-    let ID: Int
-    let title: String
-    let post:String
+struct postDataBase: Codable {
+    let id: String
+    let title: String!
+    let post: String!
+    
 }

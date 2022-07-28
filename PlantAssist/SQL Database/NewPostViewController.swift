@@ -45,7 +45,7 @@ struct NewPostViewController: View {
             
             .navigationBarTitle("New Post", displayMode: .inline)
             .navigationBarItems(leading: leading, trailing: trailing)
-        }
+        }.environmentObject(ViewDataBase())
         
     }
     var leading: some View {
@@ -57,18 +57,19 @@ struct NewPostViewController: View {
     }
     var trailing: some View {
         Button(action: {
-            if title != "" && post != "" {
+            //if title != "" && post != "" {
                 let parameters: [String: Any] = ["title": title, "post": post]
+            print("parameters for create post: " , parameters)
                 viewDataBase.createPost(parameters: parameters)
                 viewDataBase.fetchPost()
                 
                 isPresented.toggle()
-            } else {
-                isAlert.toggle()
-            }
+           // } else {
+            //    isAlert.toggle()
+           // }
         }, label: {
             Text("Post")
-    })
+    }).environmentObject(ViewDataBase())
     }
 }
 

@@ -719,7 +719,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76EA664DDD95AA52119F857A /* Pods-PlantAssist.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconpiechart;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNotes;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = PlantAssist/PlantAssist.entitlements;
@@ -731,6 +731,7 @@
 				INFOPLIST_FILE = PlantAssist/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BroadVisions;
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = FaceID;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Photo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -759,7 +760,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C02601DECEBD1433F7B2F6EA /* Pods-PlantAssist.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconpiechart;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconNotes;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = PlantAssist/PlantAssist.entitlements;
@@ -771,6 +772,7 @@
 				INFOPLIST_FILE = PlantAssist/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BroadVisions;
 				INFOPLIST_KEY_NSCameraUsageDescription = Camera;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = FaceID;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Photo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

@@ -48,13 +48,13 @@ struct DetailViewController: View {
     var trailing: some View {
         Button(action: {
             //update post
-            if title != "" && post != "" {
-                let parameters: [String: Any] = ["id":item.ID, "title":title,"post":post]
+            //if title != "" && post != "" {
+            let parameters: [String: Any] = ["id":item.id, "title":title,"post":post]
                 viewDataBase.updatePost(parameters: parameters)
                 viewDataBase.fetchPost()
                 presentationMode.wrappedValue.dismiss()
 
-            }
+            //}
         }, label: {
             Text("Save")
     })

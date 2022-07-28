@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DataBaseViewController: View {
+    //@ObservedObject var viewDataBase = ViewDataBase()
     var body: some View {
         HomeView().environmentObject(ViewDataBase())
     }
@@ -21,9 +22,8 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            
             List{
-                ForEach(viewDataBase.items, id: \.ID) {item in
+                ForEach(viewDataBase.items, id: \.id) {item in
                     NavigationLink(
                         destination: DetailViewController(item: item),
                     label: {
@@ -40,13 +40,13 @@ struct HomeView: View {
             .navigationBarItems(trailing: plusButton)
         }.sheet(isPresented: $isPresentedNewPost, content: {
             NewPostViewController(isPresented: $isPresentedNewPost, title: $title, post: $post)
-        })
+        }).environmentObject(ViewDataBase())
     }
     
     private func deletePost(indexSet: IndexSet) {
-        let id = indexSet.map { viewDataBase.items[$0].ID }
+        let id = indexSet.map { viewDataBase.items[$0].id }
         DispatchQueue.main.async{
-            let parameters: [String: Any] = ["id":id[0]]
+            let parameters: [String: Any] = ["id": id[0]]
             self.viewDataBase.deletePost(parameters: parameters)
             self.viewDataBase.fetchPost()
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dGB-Ka-RYU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GF0-72-Ixi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -37,8 +37,9 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9F-1k-qMy">
                                         <rect key="frame" x="0.0" y="71" width="334" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Post"/>
                                         <connections>
                                             <action selector="formTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WuE-XI-DX6"/>
                                         </connections>
@@ -152,17 +153,12 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="AqH-lx-cuO">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="save" id="SVM-JI-cMS"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Sx1-ne-j5e">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="save" id="SVM-JI-cMS"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="Sx1-ne-j5e">
                             <rect key="frame" x="173.5" y="5" width="67" height="34.5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Menu">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <buttonConfiguration key="configuration" style="plain" image="menubar.rectangle" catalog="system">
-                                <color key="baseForegroundColor" systemColor="linkColor"/>
-                            </buttonConfiguration>
+                            <state key="normal" image="menubar.rectangle" catalog="system"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="jHi-an-Mbx"/>
                             </connections>
@@ -508,15 +504,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FBU-gS-Jja"/>
+        <segue reference="1Gn-yQ-r77"/>
         <segue reference="jHi-an-Mbx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="PlantLeafimage" width="82" height="99.5"/>
         <image name="menubar.rectangle" catalog="system" width="128" height="93"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
